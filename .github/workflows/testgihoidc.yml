@@ -2,6 +2,11 @@ on: [push]
 
 name: AzureLoginSample
 
+# permissions for Azure OIDC auth
+permissions:
+  id-token: write   # required for requesting the JWT
+  contents: read    # required for actions/checkout
+
 jobs:
   build-and-deploy:
     runs-on: windows-latest
@@ -9,5 +14,5 @@ jobs:
       - name: Log in with Azure
         uses: azure/login@v1
         with:
-          creds: '${{ secrets.AZURE_CREDENTIALS_OIDC_NEW1 }}'
+          creds: '${{ secrets.AZURE_CREDENTIALS_OIDC_NEW2 }}'
           environment: 'azurecloud'
