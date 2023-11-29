@@ -9,4 +9,5 @@ jobs:
       - name: Log in with Azure
         uses: azure/login@v1
         with:
-          creds: '${{ secrets.AZURE_CREDENTIALS_OIDC_NEW }}'
+          creds: '${{ secrets.AZURE_CREDENTIALS_OIDC_NEW1 }}'
+          environment: 'azurecloud'
