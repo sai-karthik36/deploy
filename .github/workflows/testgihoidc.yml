@@ -15,4 +15,4 @@ jobs:
         uses: azure/login@v1
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS_OIDC_NEW2 }}'
-          environment: 'azurecloud'
+          environment: dev
